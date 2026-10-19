@@ -1,8 +1,17 @@
-# Think Before You Build
+<!-- TNDS-HEADER:BEGIN -->
+<div align="center">
+  <h1>Think Before You Build</h1>
+  <h3>Two Claude skills that pressure-test a decision before you commit, then find the gaps in the process before you build it.</h3>
+  <img src="https://raw.githubusercontent.com/Jjohnston70/Jjohnston70/main/true-north-logo-layered-v3.png" alt="True North Data Strategies" width="240" />
+  <br /><br />
+  <a href="https://truenorthstrategyops.com"><img src="https://img.shields.io/badge/Built%20by-TNDS-1F6FEB?style=for-the-badge" alt="Built by TNDS" /></a>
+  <a href="#contact"><img src="https://img.shields.io/badge/Contact-TNDS-181717?style=for-the-badge" alt="Contact" /></a>
+</div>
+<!-- TNDS-HEADER:END -->
 
-Two thinking tools for operators. One pressure-tests a decision before you commit resources. The other finds the gaps in a process or system before you build or fix it.
+## What this is
 
-## The two skills
+Two thinking tools for operators, packaged as one Claude plugin. One pressure-tests a decision before you commit resources. The other finds the gaps in a process or system before you build or fix it.
 
 | Skill | Use it when | What you get |
 |---|---|---|
@@ -10,6 +19,29 @@ Two thinking tools for operators. One pressure-tests a decision before you commi
 | World Model Mapper | "Why isn't this working?" or "What should this system track?" | A state inventory, action map, transition model, feedback audit, a ranked gap report, and one next step |
 
 They work in order. The Bearing Check decides whether a move is worth making. The World Model Mapper works out what the system has to capture once you make it.
+
+## Quick start
+
+1. Install it. Once it is listed in the Claude plugin directory: in Claude Code, open `/plugin` and find it under Discover; in the Claude app, add it from the directory.
+2. Ask Claude "run a bearing check on [decision]" or "map this process: [process]."
+
+Each skill is scoped to its job: the Bearing Check responds when you ask for a structured review of a significant decision, and the World Model Mapper when you ask to map or diagnose an operational process or system. Everyday questions are left to Claude's normal answers.
+
+## Example prompts
+
+| Prompt | Skill |
+|---|---|
+| "Run a bearing check on quitting my job to consult full time." | The Bearing Check, full pass |
+| "Quick bearing check: should I copy my competitor's free-trial offer?" | The Bearing Check, checkpoints 1, 5, 7 |
+| "Map this process: how we schedule and dispatch jobs, from customer call to completed work." | World Model Mapper |
+| "Our team stopped using the dashboard we built. Diagnose it." | World Model Mapper, debugging mode |
+
+## How each skill runs
+
+| Skill | Steps |
+|---|---|
+| The Bearing Check | 1 Ground truth, 2 Graveyard recon, 3 Mechanism check, 4 Fixed points, 5 Odds assessment, 6 Constraint fit, 7 Staged advance, 8 Pre-mortem, then a final bearing |
+| World Model Mapper | 1 Define the target, 2 State discovery, 3 Action mapping, 4 Transition modeling, 5 Feedback analysis, then a prioritized gap report, a state architecture diagram and one recommended next step |
 
 ## The ideas underneath
 
@@ -31,27 +63,6 @@ They work in order. The Bearing Check decides whether a move is worth making. Th
 | `skills/world-model-mapper/SKILL.md` | The five-phase mapping workflow and deliverables |
 | `skills/world-model-mapper/*.md` | Domain physics, feedback loop patterns, shadow vs. reality, output template, user manual |
 
-## Install
-
-Once it is listed in the Claude plugin directory: in Claude Code, open `/plugin` and find it under Discover; in the Claude app, add it from the directory.
-
-## How to use it
-
-Ask Claude "run a bearing check on [decision]" or "map this process: [process]." Each skill is scoped to its job: the Bearing Check responds when you ask for a structured review of a significant decision, and the World Model Mapper when you ask to map or diagnose an operational process or system. Everyday questions are left to Claude's normal answers.
-
-## Credits
-
-The Bearing Check synthesizes established ideas from decision theory and behavioral economics; its original eight-step structure was inspired by an article in the Data Science Collective on Medium. The World Model Mapper applies Yann LeCun's case for world models to business operations.
-
-## Example prompts
-
-| Prompt | Skill |
-|---|---|
-| "Run a bearing check on quitting my job to consult full time." | The Bearing Check, full pass |
-| "Quick bearing check: should I copy my competitor's free-trial offer?" | The Bearing Check, checkpoints 1, 5, 7 |
-| "Map this process: how we schedule and dispatch jobs, from customer call to completed work." | World Model Mapper |
-| "Our team stopped using the dashboard we built. Diagnose it." | World Model Mapper, debugging mode |
-
 ## Troubleshooting
 
 | Problem | Fix |
@@ -68,11 +79,31 @@ The Bearing Check synthesizes established ideas from decision theory and behavio
 |---|---|
 | Bug, wrong behavior, or a question | Open an issue at https://github.com/Jjohnston70/think-before-you-build/issues |
 | Security or privacy concern | Email jacob@truenorthstrategyops.com with "Security" in the subject; please do not open a public issue |
+| Who built it | True North Data Strategies LLC, an operations consultancy that builds for the people who run the work. [truenorthstrategyops.com](https://truenorthstrategyops.com) |
+
+## Credits
+
+The Bearing Check synthesizes established ideas from decision theory and behavioral economics; its original eight-step structure was inspired by an article in the Data Science Collective on Medium. The World Model Mapper applies Yann LeCun's case for world models to business operations.
 
 ## License
 
 MIT. See `LICENSE`.
 
-## Who built it
+## Stack
 
-True North Data Strategies LLC, an operations consultancy that builds for the people who run the work. [truenorthstrategyops.com](https://truenorthstrategyops.com)
+| Layer | Tools |
+|---|---|
+| Package | Claude plugin, version 1.0.0, described in `.claude-plugin/plugin.json` |
+| Skills, references and manuals | Markdown |
+| Diagrams | Mermaid, in the World Model Mapper output template |
+| Runtime | None. It runs inside Claude Code or the Claude app. |
+
+<!-- TNDS-FOOTER:BEGIN -->
+## Contact
+
+Jacob Johnston | True North Data Strategies LLC, SDVOSB | Colorado Springs, Colorado
+
+jacob@truenorthstrategyops.com | [truenorthstrategyops.com](https://truenorthstrategyops.com) | [pipelinepunks.com](https://pipelinepunks.com)
+
+_Maintained by the TNDS README steward. Last reviewed 2026-10-19._
+<!-- TNDS-FOOTER:END -->
