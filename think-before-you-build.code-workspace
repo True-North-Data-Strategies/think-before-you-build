@@ -1,0 +1,18 @@
+// Opens the Think Before You Build repository (True-North-Data-Strategies/think-before-you-build) as one folder.
+// Follows TNDS-PRM-VSCWS-001, the TNDS workspace standard. Committed with the code; edit by hand.
+{
+  "folders": [
+    {
+      "name": "Think Before You Build",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/.DS_Store": true
+    }
+  }
+}
